@@ -1,0 +1,17 @@
+{% extends "base.html" %} 
+
+            {% block header %}  
+                page-detail
+            {% endblock header %}
+
+
+        {% block content %}
+        <ul>
+            <li>{{page.title}}</li>
+            <li>{{page.content}}</li>
+            <li>{{page.last_update}}</li>
+        </ul>
+
+        <a href="{% url 'page-list' %}"><input type="button" name="back" value="back to list"></a>
+        {% endblock content %}
+

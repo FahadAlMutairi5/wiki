@@ -1,0 +1,20 @@
+{% extends "base.html" %} 
+
+            {% block header %}  
+                page-list
+            {% endblock header %}
+
+
+        {% block content %}
+        {% for page in pages %}
+            
+                <ul>
+                    <a href="{{page.get_absolute_url}}"><li>{{page.title}}</li></a>
+                    <li>{{page.content}}</li>
+                    
+                </ul>
+           
+        {% endfor %}
+
+        {% endblock content %}
+ 
